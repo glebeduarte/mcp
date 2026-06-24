@@ -1349,10 +1349,14 @@ function buildConsoles(){
 
 /* ---- ACTIONS ---- */
 function bumpDaze(d){
-  S.daze=Math.max(0,Math.min(5,S.daze+d));
-  if(d>0){ // simulate We Are Ultron
+  const prev=S.daze;
+  S.daze=Math.max(0,Math.min(5,prev+d));
+  if(S.daze>prev){ // atordoamento: We Are Ultron corrompe o firmware
     if(S.firmware<4){S.firmware++;S.stamina=0;}
     else {S.ko=true;}
+  } else if(S.daze<prev){ // desfazer atordoamento: remove a corrupção
+    if(S.ko){S.ko=false;}
+    else if(S.firmware>0){S.firmware--;}
   }
   render();
 }
