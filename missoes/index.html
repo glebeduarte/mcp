@@ -11,10 +11,9 @@
 <a class="topbar__brand" href="../index.html"><img src="../assets/img/logo-mcp.png" alt="Marvel Crisis Protocol">MCP <span>RN</span></a>
 <nav>
 <a href="../index.html">Início</a>
-<a href="../eventos/bootcamp-2026/index.html">Eventos</a>
+<a href="../eventos/evento-iniciantes/index.html">Eventos</a>
 <a href="../missoes/index.html" aria-current="page">Missões</a>
 <a href="../encontros/index.html">Encontros Definitivos</a>
-<a href="../design-system/index.html">Design System</a>
 </nav></div></header>
 
 <section class="hero"><div class="hero__in"><div>
@@ -28,25 +27,27 @@
 <article class="card" id="extremis">
 <div class="card__head"><span>Riots Spark Over Extremis 3.0</span><span class="tag">Secure</span></div>
 <div class="card__body">
+<button class="card-thumb card-thumb--mission" data-full="../assets/img/missions/secure-riots-spark-extremis.jpg" data-name="Riots Spark Over Extremis 3.0 — Secure" style="width:140px;float:right;margin:0 0 10px 12px"><img src="../assets/img/missions/secure-riots-spark-extremis-thumb.jpg" alt="Carta de missão Riots Spark Over Extremis 3.0" loading="lazy"><span>Ver a carta<em>Clique para ampliar</em></span></button>
 <div class="card__meta"><span class="pill">Secure</span><span class="pill pill--black">Standard OP 01/2026</span><span class="pill pill--warn">Threat máx.: conferir na carta</span></div>
 <h3>Resumo</h3>
 <p>Consoles Extremis espalhados pela mesa. Um personagem a Alcance 1 de um console está Contestando. Segura o console quem tiver mais personagens Saudáveis Contestando; sem Saudáveis, valem os Feridos. Personagem com Dazed não contesta.</p>
 <h3>Fichas</h3>
 <p>Consoles Extremis. Marque com fichas de objetivo Secure.</p>
 <h3>Usada em</h3>
-<p><a href="../eventos/bootcamp-2026/index.html">Bootcamp</a>, como missão fixa de todas as mesas.</p>
+<p><a href="../eventos/evento-iniciantes/index.html">Evento para Iniciantes</a>, como missão fixa de todas as mesas.</p>
 </div>
 </article>
 <article class="card card--red" id="cube">
 <div class="card__head"><span>Struggle for the Cube Continues</span><span class="tag">Extraction</span></div>
 <div class="card__body">
+<button class="card-thumb card-thumb--mission" data-full="../assets/img/missions/extraction-struggle-cube.jpg" data-name="Struggle for the Cube Continues — Extraction" style="width:140px;float:right;margin:0 0 10px 12px"><img src="../assets/img/missions/extraction-struggle-cube-thumb.jpg" alt="Carta de missão Struggle for the Cube Continues" loading="lazy"><span>Ver a carta<em>Clique para ampliar</em></span></button>
 <div class="card__meta"><span class="pill pill--red">Extraction</span><span class="pill pill--black">Standard OP 01/2026</span><span class="pill pill--warn">Threat máx.: conferir na carta</span></div>
 <h3>Resumo</h3>
 <p>Fragmentos do Cosmic Cube. Interagir custa 1 Poder, a Alcance 1, e não é uma ação. O personagem carrega o fragmento. Se ele for Dazed, KO ou removido, derruba o fragmento a Alcance 2 e o oponente o posiciona.</p>
 <h3>Fichas</h3>
 <p>Fragmentos do Cubo. Marque com fichas de objetivo Extraction.</p>
 <h3>Usada em</h3>
-<p><a href="../eventos/bootcamp-2026/index.html">Bootcamp</a>, como missão fixa de todas as mesas.</p>
+<p><a href="../eventos/evento-iniciantes/index.html">Evento para Iniciantes</a>, como missão fixa de todas as mesas.</p>
 </div>
 </article>
 </div>
@@ -58,5 +59,40 @@
 <h2>Para adicionar uma missão</h2>
 <p>Copie um dos cards acima, troque o <code>id</code>, o nome, o tipo (Secure ou Extraction) e o resumo. Inclua um card na página inicial.</p>
 </section></div>
-<footer class="footer">Marvel Crisis Protocol e as artes oficiais pertencem à Marvel e à Atomic Mass Games. Site comunitário sem fins comerciais. Fonte: <a href="https://github.com/glebeduarte/mcp">github.com/glebeduarte/mcp</a></footer>
+<footer class="footer">Marvel Crisis Protocol e as artes oficiais pertencem à Marvel e à Atomic Mass Games. Site comunitário sem fins comerciais.</footer>
+
+<div class="lightbox" id="cardLightbox" hidden>
+<button class="lightbox__close" id="cardLightboxClose" aria-label="Fechar">&times;</button>
+<figure>
+<img id="cardLightboxImg" src="" alt="">
+<figcaption id="cardLightboxCaption"></figcaption>
+</figure>
+</div>
+<script>
+(function () {
+  var lb = document.getElementById('cardLightbox');
+  var img = document.getElementById('cardLightboxImg');
+  var cap = document.getElementById('cardLightboxCaption');
+  var closeBtn = document.getElementById('cardLightboxClose');
+  function openCard(btn) {
+    img.src = btn.getAttribute('data-full');
+    img.alt = btn.getAttribute('data-name');
+    cap.textContent = btn.getAttribute('data-name');
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function closeCard() {
+    lb.hidden = true;
+    img.src = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.card-thumb').forEach(function (btn) {
+    btn.addEventListener('click', function () { openCard(btn); });
+  });
+  closeBtn.addEventListener('click', closeCard);
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeCard(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) closeCard(); });
+})();
+</script>
 </body></html>
