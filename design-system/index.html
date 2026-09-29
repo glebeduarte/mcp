@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MCP Design System para Documentos</title>
+<link rel="stylesheet" href="../assets/css/mcp-ds.css">
+</head>
+<body>
+<header class="topbar"><div class="topbar__in">
+<a class="topbar__brand" href="../index.html"><img src="../assets/img/logo-mcp.png" alt="Marvel Crisis Protocol">MCP <span>RN</span></a>
+<nav>
+<a href="../index.html">Início</a>
+<a href="../eventos/bootcamp-2026/index.html">Eventos</a>
+<a href="../missoes/index.html">Missões</a>
+<a href="../encontros/index.html">Encontros Definitivos</a>
+<a href="../design-system/index.html" aria-current="page">Design System</a>
+</nav></div></header>
+<nav class="ds-nav ds-only">
+  <strong>MCP <span>Design System</span></strong>
+  <a href="#capa">Capa</a>
+  <a href="#cores">Cores</a>
+  <a href="#tipografia">Tipografia</a>
+  <a href="#pagina">Página</a>
+  <a href="#componentes">Componentes</a>
+  <a href="#modelos">Modelos</a>
+  <a href="#uso">Como usar</a>
+</nav>
+
+<!-- ================================================================
+     CAPA (modelo)
+     ================================================================ -->
+<section class="page cover" id="capa">
+  <div class="band band--top"><div class="tag"><b>WEB EX</b> DOCUMENTO DE APOIO</div></div>
+  <div class="cover__body">
+    <div>
+      <div class="cover__kicker">Marvel Crisis Protocol</div>
+      <h1 class="cover__title"><span class="red">Design</span><br>System<br>para Documentos</h1>
+      <div class="cover__sub">Miniatures Game</div>
+    </div>
+    <div class="cover__plate">Versão 1.0<small>Base: material oficial 11/2025 e 03/2026</small></div>
+    <p class="cover__meta">Cores, tipografia, grade de página e componentes para produzir regras, encontros, guias de evento e fichas em português, com a mesma linguagem visual dos livros oficiais.</p>
+  </div>
+  <div class="band band--bottom"></div>
+</section>
+
+<!-- ================================================================
+     CORES
+     ================================================================ -->
+<section class="page" id="cores">
+  <div class="band band--top"><div class="tag"><b>01</b> FUNDAMENTOS</div></div>
+
+  <h1>Cores</h1>
+  <p class="lead">Nove cores fazem todo o trabalho. Cada uma tem um papel fixo, tirado de onde ela aparece nos PDFs oficiais.</p>
+
+  <div class="swatches">
+    <div class="sw"><i style="background:#0B0D0C"></i><div><b>Preto de faixa</b><code>--mcp-black #0B0D0C</code>Faixas com arte, barras de Stat Card</div></div>
+    <div class="sw"><i style="background:#FCD006"></i><div><b>Dourado</b><code>--mcp-gold #FCD006</code>Régua das faixas, separadores</div></div>
+    <div class="sw"><i style="background:#FFC71E"></i><div><b>Âmbar</b><code>--mcp-amber #FFC71E</code>Cabeçalho de tabela</div></div>
+    <div class="sw"><i style="background:#1480A4"></i><div><b>Petróleo</b><code>--mcp-teal #1480A4</code>Títulos de seção, cabeçalho de nota</div></div>
+    <div class="sw"><i style="background:#6D2F94"></i><div><b>Roxo</b><code>--mcp-purple #6D2F94</code>Caixas de exemplo</div></div>
+    <div class="sw"><i style="background:#E8262B"></i><div><b>Vermelho</b><code>--mcp-red #E8262B</code>Logo, rótulos de diagrama, alerta</div></div>
+    <div class="sw"><i style="background:#215A8F"></i><div><b>Azul profundo</b><code>--mcp-blue #215A8F</code>Fundo de capa</div></div>
+    <div class="sw"><i style="background:#12A8DF"></i><div><b>Azul claro</b><code>--mcp-sky #12A8DF</code>Subtítulo de capa</div></div>
+    <div class="sw"><i style="background:#DCDDDF"></i><div><b>Cinza de célula</b><code>--mcp-cell #DCDDDF</code>Células de tabela, rodapé de cards</div></div>
+    <div class="sw"><i style="background:#F7F3E6"></i><div><b>Creme</b><code>--mcp-cream #F7F3E6</code>Corpo de Stat Card</div></div>
+    <div class="sw"><i style="background:#161616"></i><div><b>Tinta</b><code>--mcp-ink #161616</code>Texto e bordas</div></div>
+    <div class="sw"><i style="background:#5F6368"></i><div><b>Texto secundário</b><code>--mcp-mute #5F6368</code>Legendas, rodapés</div></div>
+  </div>
+
+  <h2>Regras de uso</h2>
+  <div class="do-dont">
+    <div class="do">
+      <h4>Fazer</h4>
+      <ul>
+        <li>Preto só em faixas e barras. O papel é branco.</li>
+        <li>Dourado como régua de 5px, nunca como fundo de texto longo.</li>
+        <li>Petróleo apenas em títulos. Ele não colore corpo de texto.</li>
+        <li>Roxo é exemplo de regra. Se não é exemplo, não é roxo.</li>
+        <li>Vermelho em doses pequenas: um rótulo, um alerta.</li>
+      </ul>
+    </div>
+    <div class="dont">
+      <h4>Evitar</h4>
+      <ul>
+        <li>Gradientes em caixas de conteúdo. Só a capa usa gradiente.</li>
+        <li>Cores de afiliação como cor de sistema. Elas entram só em cards de squad.</li>
+        <li>Sombras suaves em todo card. A hierarquia vem de borda e barra.</li>
+        <li>Fundo cinza em página inteira.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Cores de afiliação (para cards de squad)</h2>
+  <p class="small mute">Usadas apenas no cabeçalho de um card de squad ou em uma pílula. Fora disso, o documento fica na paleta base.</p>
+  <p>
+    <span class="pill" style="background:#E63946">Web Warriors</span>
+    <span class="pill" style="background:#6C757D">Spider-Foes</span>
+    <span class="pill pill--gold">X-Men</span>
+    <span class="pill" style="background:#2A9D8F">Irmandade</span>
+    <span class="pill" style="background:#1D4ED8">Avengers</span>
+    <span class="pill pill--purple">Cabal</span>
+    <span class="pill" style="background:#F77F00">Defenders</span>
+    <span class="pill pill--black">Sindicato</span>
+  </p>
+
+  <div class="band band--bottom"></div>
+  <div class="page-num">2</div>
+</section>
+
+<!-- ================================================================
+     TIPOGRAFIA
+     ================================================================ -->
+<section class="page" id="tipografia">
+  <div class="band band--top"><div class="tag"><b>01</b> FUNDAMENTOS</div></div>
+
+  <h1>Tipografia</h1>
+  <p class="lead">Duas famílias com papéis opostos: um condensado de impacto para títulos e uma serifa clássica para leitura, como nos livros oficiais.</p>
+
+  <div class="grid-2">
+    <div>
+      <h3>Display</h3>
+      <p style="font-family:var(--font-display);font-size:2.6rem;line-height:1;margin:0">Bebas Neue</p>
+      <p class="small mute">Maiúsculo, sem peso variável. Fallback: Oswald, Arial Narrow, Impact. Uso: títulos, cabeçalhos de tabela, barras de caixa, números de página, pílulas.</p>
+    </div>
+    <div>
+      <h3>Corpo</h3>
+      <p style="font-size:1.6rem;line-height:1.1;margin:0">Palatino <em>ou</em> Crimson Pro</p>
+      <p class="small mute">Palatino Linotype quando existir no sistema; Crimson Pro carregada como reserva. Uso: parágrafos, listas, células de tabela, notas.</p>
+    </div>
+  </div>
+
+  <h2>Escala</h2>
+  <div class="typo-row"><code>h1 / 2.5rem</code><h1 style="margin:0">Título de página</h1></div>
+  <div class="typo-row"><code>h2 / 1.75rem</code><h2 style="margin:0">Título de seção</h2></div>
+  <div class="typo-row"><code>h3 / 1.25rem</code><h3 style="margin:0">Subtítulo em tinta</h3></div>
+  <div class="typo-row"><code>h4 / 1rem</code><h4 style="margin:0">Rótulo roxo</h4></div>
+  <div class="typo-row"><code>.lead / 1.25rem</code><p class="lead" style="margin:0">Parágrafo de abertura, uma ou duas frases.</p></div>
+  <div class="typo-row"><code>p / 1rem</code><p style="margin:0">Corpo de texto. Linhas de até 72 caracteres, entrelinha 1.5, <strong>negrito para nomes de personagem</strong> e <em>itálico para nomes de superpoder</em>.</p></div>
+  <div class="typo-row"><code>.small / 0.86rem</code><p class="small" style="margin:0">Notas, legendas de figura e células de tabela.</p></div>
+  <div class="typo-row"><code>.small.mute</code><p class="small mute" style="margin:0">Créditos, fontes e avisos de rodapé.</p></div>
+
+  <h2>Convenções de texto</h2>
+  <ol class="ruled">
+    <li><span>Nomes de personagem em <strong>negrito</strong>: <strong>Captain America, First Avenger</strong>.</span></li>
+    <li><span>Nomes de superpoder, ataque e Liderança em <em>itálico</em>: <em>Earth's Mightiest Heroes</em>.</span></li>
+    <li><span>Termos de regra com inicial maiúscula, como no livro: Contestando, Saudável, Dazed, Interagir.</span></li>
+    <li><span>Ícones de regra viram badges com letra: <span class="glyph">P</span> Poder, <span class="glyph">A</span> Alcance, <span class="glyph">T</span> Threat.</span></li>
+    <li><span>Sem travessão. Frases curtas, vírgula ou ponto.</span></li>
+  </ol>
+
+  <div class="band band--bottom"></div>
+  <div class="page-num">3</div>
+</section>
+
+<!-- ================================================================
+     PÁGINA
+     ================================================================ -->
+<section class="page" id="pagina">
+  <div class="band band--top"><div class="tag"><b>02</b> PÁGINA</div></div>
+
+  <h1>Anatomia da página</h1>
+  <p class="lead">Toda página é A4 com faixa preta em cima e embaixo, régua dourada, margens de 14mm e número de página em condensado no canto inferior direito.</p>
+
+  <div class="grid-2">
+    <div>
+      <h3>Medidas</h3>
+      <table class="mcp left">
+        <tr><th>Elemento</th><th>Valor</th></tr>
+        <tr><td>Tamanho</td><td>210 x 297mm</td></tr>
+        <tr><td>Faixa preta</td><td>12mm de altura</td></tr>
+        <tr><td>Régua dourada</td><td>5px, na borda interna da faixa</td></tr>
+        <tr><td>Margem lateral</td><td>14mm</td></tr>
+        <tr><td>Área de texto</td><td>de 20mm a 277mm (altura)</td></tr>
+        <tr><td>Colunas</td><td>1 para tabelas e cards, 2 para texto corrido</td></tr>
+        <tr><td>Número de página</td><td>Condensado 1.4rem, canto inferior direito</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Tag da faixa</h3>
+      <p class="small">A faixa de topo recebe uma etiqueta curta em condensado: um código em dourado seguido do nome da parte. Exemplos: <span class="pill pill--black"><span style="color:var(--mcp-gold)">WEB EX</span> ENCONTRO</span> <span class="pill pill--black"><span style="color:var(--mcp-gold)">02</span> VIÉS A</span></p>
+      <h3>Cinco tipos de página</h3>
+      <ul class="small">
+        <li><strong>Capa:</strong> fundo azul, título condensado gigante, placa preta com versão.</li>
+        <li><strong>Texto:</strong> duas colunas de serifa, h2 em petróleo, caixas de exemplo intercaladas.</li>
+        <li><strong>Tabela:</strong> uma coluna, tabela com cabeçalho âmbar dominando.</li>
+        <li><strong>Referência:</strong> grade de cards e notas, pouco texto corrido.</li>
+        <li><strong>Cola rápida:</strong> tudo em caixas, sem parágrafos, para deixar na mesa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Esqueleto de uma página</h2>
+<pre class="code">&lt;link rel="stylesheet" href="/assets/css/mcp-ds.css"&gt;
+
+&lt;section class="page"&gt;
+  &lt;div class="band band--top"&gt;&lt;div class="tag"&gt;&lt;b&gt;02&lt;/b&gt; NOME DA PARTE&lt;/div&gt;&lt;/div&gt;
+
+  &lt;h1&gt;Título da página&lt;/h1&gt;
+  &lt;p class="lead"&gt;Uma frase que diz o que a página resolve.&lt;/p&gt;
+  &lt;div class="columns"&gt;
+    ... texto, h2, listas, .example, .stat, .note ...
+  &lt;/div&gt;
+
+  &lt;div class="band band--bottom"&gt;&lt;/div&gt;
+  &lt;div class="page-num"&gt;7&lt;/div&gt;
+&lt;/section&gt;</pre>
+
+  <div class="band band--bottom"></div>
+  <div class="page-num">4</div>
+</section>
+
+<!-- ================================================================
+     COMPONENTES 1
+     ================================================================ -->
+<section class="page" id="componentes">
+  <div class="band band--top"><div class="tag"><b>03</b> COMPONENTES</div></div>
+
+  <h1>Componentes de regra</h1>
+  <p class="lead">Os três blocos que o livro oficial usa para explicar qualquer coisa: a ficha, o exemplo e a nota.</p>
+
+  <h2>Stat Card <span class="small mute" style="font-family:var(--font-body)">.stat</span></h2>
+  <p class="small">Barra preta com ícone de tipo, nome e valores à direita. Corpo creme com regras em lista. Serve para ataques, superpoderes, Lideranças e cartas táticas.</p>
+
+  <div class="stat">
+    <div class="stat__bar"><span class="ico ico--phys">F</span> Shield Bounce
+      <span class="stats"><span>A 3</span><span>D 5</span><span>P 0</span></span></div>
+    <div class="stat__body"><ul>
+      <li>Após este ataque ser resolvido, este personagem ganha Poder igual ao dano causado.</li>
+      <li><strong>Bounce:</strong> após este ataque ser resolvido, ele pode fazer um ataque Shield Bounce adicional contra outro alvo a Alcance 3 do alvo original.</li>
+    </ul></div>
+  </div>
+
+  <div class="stat">
+    <div class="stat__bar"><span class="ico ico--reactive">R</span> Intense Physical Conditioning
+      <span class="stats"><span>P 1</span></span></div>
+    <div class="stat__body">Quando este personagem sofreria dano, pode usar este superpoder. Reduz o dano sofrido em 1.</div>
+  </div>
+
+  <h2>Exemplo <span class="small mute" style="font-family:var(--font-body)">.example</span></h2>
+  <p class="small">Roxo, texto branco, nomes em amarelo claro. Sempre logo abaixo da regra que ilustra. Nunca contém regra nova.</p>
+  <div class="example"><span class="label">Exemplo</span><b>Kingpin</b> tem o superpoder <em>Intense Physical Conditioning</em>. É um poder Reativo, então ele só pode usar quando sofreria dano, e uma única vez por evento. Custa 1 Poder, então ele paga 1 Poder a cada uso.</div>
+
+  <h2>Nota <span class="small mute" style="font-family:var(--font-body)">.note</span></h2>
+  <div class="grid-2">
+    <div class="note"><div class="note__head">Imunidades</div><div class="note__body">Um personagem imune a uma condição especial não recebe aquela condição e não sofre seus efeitos.</div></div>
+    <div class="note note--alert"><div class="note__head">Erro comum</div><div class="note__body">O dado extra por Crítico é rolado uma vez por rolagem, não uma vez por cada Crítico.</div></div>
+  </div>
+
+  <div class="band band--bottom"></div>
+  <div class="page-num">5</div>
+</section>
+
+<!-- ================================================================
+     COMPONENTES 2
+     ================================================================ -->
+<section class="page">
+  <div class="band band--top"><div class="tag"><b>03</b> COMPONENTES</div></div>
+
+  <h1>Tabelas, cards e badges</h1>
+
+  <h2>Tabela oficial <span class="small mute" style="font-family:var(--font-body)">table.mcp</span></h2>
+  <p class="small">Cabeçalho âmbar em condensado, células cinza, bordas pretas de 1.5px, centralizada. Variante <code>.left</code> alinha à esquerda, <code>.plain</code> deixa células brancas.</p>
+  <table class="mcp">
+    <tr><th>Dificuldade</th><th>Cartas táticas</th><th>Doomsday Device</th></tr>
+    <tr><td>Tutorial</td><td>0</td><td>Rola 2 dados por rodada</td></tr>
+    <tr><td>Normal</td><td>3</td><td>Rola 3 dados por rodada</td></tr>
+    <tr><td>Difícil</td><td>2</td><td>Rola 4 dados por rodada</td></tr>
+    <tr><td>Insano</td><td>1</td><td>Rola 5 dados por rodada</td></tr>
+  </table>
+
+  <h2>Card de squad <span class="small mute" style="font-family:var(--font-body)">.squad</span></h2>
+  <div class="grid-2">
+    <div class="squad">
+      <div class="squad__head"><span>Avengers</span><span class="total">12 pts</span></div>
+      <div class="squad__row"><span class="threat">4</span><span class="name">Captain America</span><span class="pill pill--gold">Líder</span></div>
+      <div class="squad__row"><span class="threat">4</span><span class="name">Invincible Iron Man</span></div>
+      <div class="squad__row"><span class="threat">4</span><span class="name">Black Panther</span></div>
+      <div class="squad__foot">Afiliação Avengers, precisa 2 de 3 <span class="pill pill--ok" style="float:right">OK</span></div>
+    </div>
+    <div class="squad">
+      <div class="squad__head" style="background:#6D2F94"><span>Cabal</span><span class="total">12 pts</span></div>
+      <div class="squad__row"><span class="threat">4</span><span class="name">Red Skull, Master of the World</span><span class="pill pill--gold">Líder</span></div>
+      <div class="squad__row"><span class="threat">4</span><span class="name">Ultron</span></div>
+      <div class="squad__row"><span class="threat">4</span><span class="name">Winter Soldier</span></div>
+      <div class="squad__foot">Afiliação Cabal, precisa 2 de 3 <span class="pill pill--warn" style="float:right">Conferir</span></div>
+    </div>
+  </div>
+
+  <h2>Badges e pílulas</h2>
+  <p>
+    <span class="threat">5</span> <span class="threat">3</span>
+    <span class="pill">Secure</span> <span class="pill pill--red">Extraction</span> <span class="pill pill--gold">Líder</span>
+    <span class="pill pill--purple">Exemplo</span> <span class="pill pill--black">Web Ex</span>
+    <span class="pill pill--ok">OK</span> <span class="pill pill--warn">Conferir</span>
+  </p>
+
+  <h2>Legenda de ícones <span class="small mute" style="font-family:var(--font-body)">.icon-legend</span></h2>
+  <p class="small">Os glifos oficiais não estão disponíveis como fonte. Use círculos com letra e mantenha a legenda em toda cola rápida.</p>
+  <div class="icon-legend">
+    <div><span class="glyph">A</span> Alcance</div>
+    <div><span class="glyph">P</span> Poder</div>
+    <div><span class="glyph">F</span> Força</div>
+    <div><span class="glyph">L</span> Liderança</div>
+    <div><span class="glyph">D</span> Dano</div>
+    <div><span class="glyph">T</span> Threat</div>
+    <div><span class="glyph" style="background:#C0242B;color:#fff;border-color:#C0242B">Fi</span> Físico</div>
+    <div><span class="glyph" style="background:#1E7ABF;color:#fff;border-color:#1E7ABF">En</span> Energia</div>
+    <div><span class="glyph" style="background:#6D2F94;color:#fff;border-color:#6D2F94">Mi</span> Místico</div>
+    <div><span class="glyph" style="background:#2E7D32;color:#fff;border-color:#2E7D32">At</span> Ativo</div>
+    <div><span class="glyph" style="background:#E67E22;color:#fff;border-color:#E67E22">Re</span> Reativo</div>
+    <div><span class="glyph" style="background:#455A64;color:#fff;border-color:#455A64">In</span> Inato</div>
+  </div>
+
+  <div class="band band--bottom"></div>
+  <div class="page-num">6</div>
+</section>
+
+<!-- ================================================================
+     MODELO: PÁGINA DE TEXTO
+     ================================================================ -->
+<section class="page" id="modelos">
+  <div class="band band--top"><div class="tag"><b>04</b> MODELOS</div></div>
+
+  <h1>Modelo: página de regras</h1>
+  <div class="columns">
+    <h2>Superpoderes</h2>
+    <p>Os personagens de <em>Crisis Protocol</em> são indivíduos extraordinários. Seja por treino, raios gama ou magia, cada um é capaz de feitos sobre-humanos. Essas habilidades são chamadas de <strong>superpoderes</strong>.</p>
+    <ol class="ruled">
+      <li><span><strong>Tipo:</strong> Ativo, Reativo ou Inato, representado pelo ícone na carta.</span></li>
+      <li><span><strong>Nome:</strong> identifica o superpoder e pode ser citado por outras regras.</span></li>
+      <li><span><strong>Custo de Poder:</strong> quanto Poder gastar para usar. Nem todo superpoder tem custo.</span></li>
+      <li><span><strong>Regras especiais:</strong> o efeito e as condições de uso.</span></li>
+    </ol>
+    <h2>Liderança</h2>
+    <p>Quando um squad tem um personagem com Liderança e usa a afiliação exigida, a Liderança fica ativa para aquela partida. Se houver mais de uma, o jogador escolhe uma depois da implantação.</p>
+    <div class="example"><span class="label">Exemplo</span><b>Captain America</b> tem a Liderança <em>Earth's Mightiest Heroes</em>. Enquanto o squad declara Avengers e ele está em jogo, todo o squad se beneficia. Sem a afiliação, a Liderança não faz nada.</div>
+    <div class="stat">
+      <div class="stat__bar"><span class="ico ico--active">A</span> Charge <span class="stats"><span>P 2</span></span></div>
+      <div class="stat__body">Ação: este personagem faz imediatamente uma ação de movimento seguida de uma ação de ataque. Só pode ser usado uma vez por turno.</div>
+    </div>
+    <div class="note"><div class="note__head">Prioridade de regras</div><div class="note__body">Quando uma regra especial contradiz o livro, a regra especial vale. Quando duas regras especiais se contradizem, a carta de Crise vale.</div></div>
+  </div>
+
+  <div class="band band--bottom"></div>
+  <div class="page-num">7</div>
+</section>
+
+<!-- ================================================================
+     MODELO: COLA RÁPIDA
+     ================================================================ -->
+<section class="page">
+  <div class="band band--top"><div class="tag"><b>04</b> MODELOS</div></div>
+
+  <h1>Modelo: cola rápida de mesa</h1>
+  <p class="lead">Só caixas. Nenhum parágrafo. A pessoa olha de relance no meio da partida.</p>
+
+  <div class="grid-3">
+    <div class="note"><div class="note__head">1. Poder</div><div class="note__body">Todo personagem ganha 1 Poder.</div></div>
+    <div class="note note--alert"><div class="note__head">2. Ativação</div><div class="note__body">Alternam turnos: ativa 1 personagem ou passa.</div></div>
+    <div class="note note--gold"><div class="note__head">3. Limpeza</div><div class="note__body">Pontua e resolve efeitos de fim de rodada.</div></div>
+  </div>
+
+  <table class="mcp left">
+    <tr><th>Ação</th><th>O que faz</th></tr>
+    <tr><td>Mover</td><td>Avançar ou Escalar</td></tr>
+    <tr><td>Atacar</td><td>Um ataque listado na carta</td></tr>
+    <tr><td>Recuperar</td><td>Remove uma condição especial</td></tr>
+    <tr><td>Superpoder</td><td>Um poder Ativo que exija ação</td></tr>
+    <tr><td>Carta tática</td><td>Só as de Ação</td></tr>
+  </table>
+
+  <div class="grid-2">
+    <div class="stat">
+      <div class="stat__bar">Dado de 8 faces</div>
+      <div class="stat__body">Crítico 1, Coringa 1, Acerto 2, Bloqueio 1, Falha 1, Branco 2. O dado extra por Crítico vale uma vez por rolagem.</div>
+    </div>
+    <div class="stat">
+      <div class="stat__bar">Vitória</div>
+      <div class="stat__body">16 PV encerram a partida na hora. Sem 16 PV ao fim da rodada 6, vence quem tiver mais. Se só um jogador tem personagens na mesa, ele vence.</div>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step"><div><h3>Prioridade</h3><p class="small" style="margin:0">Cada jogador rola 5 dados. Vence quem somar mais Críticos, Coringas e Acertos.</p></div></div>
+    <div class="step"><div><h3>Implantação</h3><p class="small" style="margin:0">Alternando, a Alcance 3 da própria borda, começando por quem tem prioridade.</p></div></div>
+    <div class="step"><div><h3>Liderança</h3><p class="small" style="margin:0">Declarada em segredo e ao mesmo tempo. Uma por jogo, só com a afiliação certa.</p></div></div>
+  </div>
+
+  <div class="band band--bottom"></div>
+  <div class="page-num">8</div>
+</section>
+
+<!-- ================================================================
+     COMO USAR
+     ================================================================ -->
+<section class="page" id="uso">
+  <div class="band band--top"><div class="tag"><b>05</b> COMO USAR</div></div>
+
+  <h1>Como montar um documento novo</h1>
+  <ol class="ruled">
+    <li><span>Todo o CSS está em <code>assets/css/mcp-ds.css</code>, com as fontes em <code>assets/fonts/</code>. Basta linkar o arquivo.</span></li>
+    <li><span>Cada <code>&lt;section class="page"&gt;</code> é uma página A4. Coloque as faixas, o conteúdo e o número.</span></li>
+    <li><span>Primeira página sempre <code>.page.cover</code>. Última página, checklist ou créditos.</span></li>
+    <li><span>Para imprimir ou gerar PDF: Ctrl+P, A4, margens zero, gráficos de fundo ligados.</span></li>
+    <li><span>Para publicar na web: não há dependência externa. As fontes ficam no repositório, com fallback de sistema.</span></li>
+  </ol>
+
+  <h2>Mapa de classes</h2>
+  <table class="mcp left">
+    <tr><th>Classe</th><th>Uso</th></tr>
+    <tr><td><code>.page</code>, <code>.page.cover</code></td><td>Página A4 e capa</td></tr>
+    <tr><td><code>.band--top .tag</code>, <code>.page-num</code></td><td>Etiqueta da faixa e número de página</td></tr>
+    <tr><td><code>h1</code> a <code>h4</code>, <code>.lead</code>, <code>.small</code>, <code>.mute</code></td><td>Escala de texto</td></tr>
+    <tr><td><code>.columns</code>, <code>.grid-2</code>, <code>.grid-3</code></td><td>Duas colunas de texto, grades de caixas</td></tr>
+    <tr><td><code>table.mcp</code> (+ <code>.left</code>, <code>.plain</code>)</td><td>Tabela oficial</td></tr>
+    <tr><td><code>.stat</code>, <code>.example</code>, <code>.note</code> (+ <code>--alert</code>, <code>--gold</code>)</td><td>Ficha, exemplo e nota</td></tr>
+    <tr><td><code>.squad</code>, <code>.threat</code>, <code>.pill</code>, <code>.glyph</code></td><td>Card de squad, badge de Threat, pílulas, ícones</td></tr>
+    <tr><td><code>.steps .step</code>, <code>ol.ruled</code></td><td>Sequências numeradas</td></tr>
+    <tr><td><code>hr.gold</code></td><td>Separador dourado</td></tr>
+  </table>
+
+  <h2>Snippets</h2>
+<pre class="code">&lt;div class="stat"&gt;
+  &lt;div class="stat__bar"&gt;&lt;span class="ico ico--energy"&gt;E&lt;/span&gt; Nome do ataque
+    &lt;span class="stats"&gt;&lt;span&gt;A 4&lt;/span&gt;&lt;span&gt;D 5&lt;/span&gt;&lt;span&gt;P 2&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="stat__body"&gt;Regras do ataque.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="example"&gt;&lt;span class="label"&gt;Exemplo&lt;/span&gt;&lt;b&gt;Personagem&lt;/b&gt; faz tal coisa...&lt;/div&gt;
+
+&lt;div class="note"&gt;&lt;div class="note__head"&gt;Título&lt;/div&gt;&lt;div class="note__body"&gt;Texto.&lt;/div&gt;&lt;/div&gt;
+
+&lt;table class="mcp"&gt;&lt;tr&gt;&lt;th&gt;A&lt;/th&gt;&lt;th&gt;B&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+
+  <p class="small mute">Marvel Crisis Protocol e as artes oficiais pertencem à Marvel e à Atomic Mass Games. Este sistema reproduz a linguagem visual para documentos de uso pessoal e comunitário, sem imagens oficiais.</p>
+
+  <div class="band band--bottom"></div>
+  <div class="page-num">9</div>
+</section>
+
+</body>
+</html>
